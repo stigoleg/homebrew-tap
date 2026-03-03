@@ -5,21 +5,21 @@
 class Keepalive < Formula
   desc "A lightweight, cross-platform utility to prevent system sleep"
   homepage "https://github.com/stigoleg/keep-alive"
-  version "1.5.0"
+  version "1.5.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.0/keep-alive_Darwin_x86_64.tar.gz"
-      sha256 "5d9079a0829d2abdd6064a0f7353e885540679bac3db180432b0e8468665e616"
+      url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.1/keep-alive_Darwin_x86_64.tar.gz"
+      sha256 "6f7dba01d3622e81e64aecd07256d510aa126277e0419e8d00a79b944d9e3ddd"
 
       def install
         bin.install "keepalive"
       end
     end
     on_arm do
-      url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.0/keep-alive_Darwin_arm64.tar.gz"
-      sha256 "53480e3a148a4eb5d892ffe6403bf57df4ea796dbd0716b51e76429814b9f754"
+      url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.1/keep-alive_Darwin_arm64.tar.gz"
+      sha256 "705e9c4bde93b40c86986207a4ab054466030b8e2d058ee79292302367e91665"
 
       def install
         bin.install "keepalive"
@@ -30,8 +30,8 @@ class Keepalive < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.0/keep-alive_Linux_x86_64.tar.gz"
-        sha256 "28af391a1bc53f4e0af80103cb99a82823af5f5cc0b70786921c63e0d16e0dad"
+        url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.1/keep-alive_Linux_x86_64.tar.gz"
+        sha256 "171c6a203697a8c9cae10259ed46174cfaa8752ca6acd12eb3bccb540ff72b01"
 
         def install
           bin.install "keepalive"
@@ -40,8 +40,8 @@ class Keepalive < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.0/keep-alive_Linux_arm64.tar.gz"
-        sha256 "5ca3ec4a07f6e57646cb7fa62903668a2ecacc56a28d78bd95e03c83996763d7"
+        url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.1/keep-alive_Linux_arm64.tar.gz"
+        sha256 "7c194a5f9bb286f4f543dedbdebe0c28c450170f8b7217d9f0300916c27a88b2"
 
         def install
           bin.install "keepalive"
