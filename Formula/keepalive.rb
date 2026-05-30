@@ -11,7 +11,7 @@ class Keepalive < Formula
   on_macos do
     on_intel do
       url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.3/keep-alive_Darwin_x86_64.tar.gz"
-      sha256 "3867144efd1cfc12482826fc22a50f46a822cc2485a0db07727493b3e7d17c85"
+      sha256 "86e6da0cb72a8fb8f104d49d59ac869d9f338f1d60b4897e35e815e0fd46e7eb"
 
       def install
         bin.install "keepalive"
@@ -19,7 +19,7 @@ class Keepalive < Formula
     end
     on_arm do
       url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.3/keep-alive_Darwin_arm64.tar.gz"
-      sha256 "93c54367ca36c0ee1d7e40c620aa45e76d475bfd1dd1e90c981059f99978794b"
+      sha256 "99c3a09b4fd314c65ccf92f344170c490d64245c3cea7c4f72d280eb945a1b59"
 
       def install
         bin.install "keepalive"
@@ -31,7 +31,7 @@ class Keepalive < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.3/keep-alive_Linux_x86_64.tar.gz"
-        sha256 "c93ffd0c27df53890a50ff7c63acd2e801f1fba1d267b0abd928cb1ab8e8c0c9"
+        sha256 "b3890b4929727277707e7de8a1dcd7000f3322607e0ba7d91a6b6520c5630cb4"
 
         def install
           bin.install "keepalive"
@@ -41,7 +41,7 @@ class Keepalive < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/stigoleg/keep-alive/releases/download/v1.5.3/keep-alive_Linux_arm64.tar.gz"
-        sha256 "b7b06112c98009f30f206bcd618c3728218bcea31ce79d9dffc8ccb2ecfca4ab"
+        sha256 "ce082d3a0394aec25647c5ef16ed1ab3bc10d176d3ea29ed7c8dd6ae3b99a8ff"
 
         def install
           bin.install "keepalive"
