@@ -7,7 +7,7 @@
 # .github/workflows/release.yml).
 cask "claude-profile-switcher" do
   version "1.3.0"
-  sha256 "PLACEHOLDER_UPDATED_BY_RELEASE_WORKFLOW"
+  sha256 "ca0ab2ac456bb6f24a8a2b9235395a131da801f90a0c592044ad625de1502394"
 
   url "https://github.com/stigoleg/claude-account-switch/releases/download/v#{version}/ClaudeProfileSwitcher-#{version}.zip"
   name "Claude Profile Switcher"
