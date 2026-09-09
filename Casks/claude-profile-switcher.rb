@@ -14,7 +14,7 @@ cask "claude-profile-switcher" do
   desc "Menu-bar app for switching between multiple Claude accounts (Desktop + CLI)"
   homepage "https://github.com/stigoleg/claude-account-switch"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Claude Profile Switcher.app"
 
@@ -27,6 +27,4 @@ cask "claude-profile-switcher" do
     Only do this for software you trust — you can verify downloads against
     the SHA256SUMS file attached to each GitHub release.
   EOS
-
-  zap trash: "~/Library/Application Support/ClaudeProfileSwitcher"
 end
