@@ -1,13 +1,13 @@
 # Homebrew cask for Claude Profile Switcher.
 #
-# This file is the template for the tap repo — copy it to
-# stigoleg/homebrew-tap as Casks/claude-profile-switcher.rb. After that, the
-# release workflow's `update-cask` job keeps `version` and `sha256` current on
-# every tagged release (requires the TAP_GITHUB_TOKEN secret; see
-# .github/workflows/release.yml).
+# This file is the source of truth for stigoleg/homebrew-tap
+# Casks/claude-profile-switcher.rb. On every tagged release the workflow's
+# `update-cask` job renders it into the tap with the release's `version` and
+# `sha256` (requires the TAP_GITHUB_TOKEN secret; see
+# .github/workflows/release.yml). Edit stanzas and caveats here, not in the tap.
 cask "claude-profile-switcher" do
-  version "1.3.0"
-  sha256 "ca0ab2ac456bb6f24a8a2b9235395a131da801f90a0c592044ad625de1502394"
+  version "2.0.0"
+  sha256 "9c25f33b0169a58c82b691a03595405627f7659794cedb54f7ebb6a76e59a71d"
 
   url "https://github.com/stigoleg/claude-account-switch/releases/download/v#{version}/ClaudeProfileSwitcher-#{version}.zip"
   name "Claude Profile Switcher"
@@ -19,12 +19,8 @@ cask "claude-profile-switcher" do
   app "Claude Profile Switcher.app"
 
   caveats <<~EOS
-    This app is ad-hoc signed (no Apple Developer ID), so macOS Gatekeeper
-    blocks the first launch. After installing, either right-click the app in
-    Finder and choose Open (once), or run:
-      xattr -d com.apple.quarantine "/Applications/Claude Profile Switcher.app"
-
-    Only do this for software you trust — you can verify downloads against
-    the SHA256SUMS file attached to each GitHub release.
+    Version 2 migrates legacy profiles only after creating a verified APFS
+    copy-on-write backup. Profile data is intentionally retained when the cask
+    is uninstalled; use the app's Disable & Restore action first.
   EOS
 end
